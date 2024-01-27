@@ -71,8 +71,8 @@ flexcontroller "eyelid" "blink" "range" 0 1
           flexpair "AU26Z" 1.0 frame 32
           flexpair "AU27Z" 1.0 frame 33
      }
-     eyeball righteye ValveBiped.Bip01_Head1 -1.230 -3.747 67.362 eyeball_r 1.000  4.000 pupil_r 0.490
-     eyeball lefteye ValveBiped.Bip01_Head1 1.420 -3.747 67.339 eyeball_l 1.000  -4.000 pupil_l 0.490
+     //eyeball righteye ValveBiped.Bip01_Head1 -1.230 -3.747 67.362 eyeball_r 1.000  4.000 pupil_r 0.490
+     //eyeball lefteye ValveBiped.Bip01_Head1 1.420 -3.747 67.339 eyeball_l 1.000  -4.000 pupil_l 0.490
       //eyelid  upper_right "flexes\mdldecompiler_expressions.vta" lowerer 2 -0.245000 neutral 0 -0.000000 raiser 1070586868 0.000000 split 0.1 eyeball righteye
       //eyelid  lower_right "flexes\mdldecompiler_expressions.vta" lowerer 4 -0.274700 neutral 0 -26815615859885218000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.000000 raiser -1080056769 0.000000  split 0.1 eyeball righteye
       //eyelid  upper_left "flexes\mdldecompiler_expressions.vta" lowerer 6 -0.245000 neutral 0 -0.000000 raiser 1070586868 0.000000 split -0.1 eyeball lefteye

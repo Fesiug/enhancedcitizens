@@ -1,49 +1,14 @@
 $pushd "female_base"
 
-$bodygroup "torso"
-{
-	studio "female_base_torso_citizen_1.smd"
-	studio "female_base_torso_citizen_2.smd"
-	studio "female_base_torso_citizen_3.smd"
-	studio "female_base_torso_refugee_1.smd"
-	studio "female_base_torso_refugee_2.smd"
-	studio "female_base_torso_rebel_1.smd"
-	studio "female_base_torso_rebel_2.smd"
-	studio "female_base_torso_medic_1.smd"
-	studio "female_base_torso_medic_2.smd"
-	studio "female_base_torso_medic_3.smd"
-	studio "female_base_torso_hostage_1.smd"
-	studio "female_base_torso_hostage_2.smd"
-	studio "female_base_torso_combine_1.smd"
-	studio "female_base_torso_combine_2.smd"
-	studio "female_base_torso_combine_3.smd"
-}
-$bodygroup "legs"
-{
-	studio "female_base_legs_citizen_1.smd"
-	studio "female_base_legs_citizen_2.smd"
-	studio "female_base_legs_refugee.smd"
-	studio "female_base_legs_rebel_1.smd"
-	studio "female_base_legs_rebel_2.smd"
-	studio "female_base_legs_medic.smd"
-	studio "female_base_legs_hostage.smd"
-}
-
-$cdmaterials "models\bloo_ltcom_zel\citizens\female"
-$cdmaterials "models\bloo_ltcom_zel\citizens\"
-$cdmaterials "models\bloo_ltcom_zel\citizens\facemaps\"
+$cdmaterials "fgut\female\"
+$cdmaterials "fgut\"
+$cdmaterials "fgut\facemaps\"
 
 $surfaceprop "flesh"
 
 $contents "solid"
 
 $eyeposition 0 0 70
-
-// Thes aren't really necessary and break certain landing animations, but I'm keeping them because people use the models for NPCs.
-$includemodel "humans/female_shared.mdl"
-$includemodel "humans/female_ss.mdl"
-$includemodel "humans/female_gestures.mdl"
-$includemodel "humans/female_postures.mdl"
 
 $include "female_base/female_base_ragdoll.qci"
 $include "female_base/female_base_commonbones.qci"

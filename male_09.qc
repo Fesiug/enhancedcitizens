@@ -1,223 +1,47 @@
-$modelname "player/zelpa/male_09.mdl"
+$modelname "fgut/male_09_01.mdl"
 
 $includemodel "m_anm.mdl"
 
-$pushd "male_base/heads"
+$pushd "male_base/reheads"
 
-$model "male_09" "male_09_reference.smd" {
+$model male_09 "male_09.smd" {
+	eyeball righteye "ValveBiped.Bip01_Head1" -1.2978 -3.6046 67.6819 "eyeball_r" 1 4 "grn_pupil_r" 0.66
+	eyeball lefteye "ValveBiped.Bip01_Head1" 1.2874 -3.6046 67.6634 "eyeball_l" 1 -4 "grn_pupil_l" 0.66
 
-	eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.297800 -3.604599 67.681902 "eyeball_r" 1 4 "iris_unused" 0.66
-	eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.287400 -3.604599 67.663401 "eyeball_l" 1 -4 "iris_unused" 0.66
-	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
+	eyelid  upper_right "male_09" lowerer 1 -0.2185 neutral 0 0.1668 raiser 2 0.265 split 0.1 eyeball righteye
+	eyelid  lower_right "male_09" lowerer 3 -0.301 neutral 0 -0.2119 raiser 4 -0.0403 split 0.1 eyeball righteye
+	eyelid  upper_left "male_09" lowerer 1 -0.2185 neutral 0 0.1668 raiser 2 0.265 split -0.1 eyeball lefteye
+	eyelid  lower_left "male_09" lowerer 3 -0.301 neutral 0 -0.2119 raiser 4 -0.0403 split -0.1 eyeball lefteye
 
-	flexfile "male_base/heads/flexes/male_09_expressions" {
-	$include "male_base/heads/flexes/standardflex_xsi_09.qci"
+	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0     // mouth illumination
+
+	flexfile "male_09" {
+		$include "male_base/reheads/standardflex_xsi.qci"
+	}
+
+	$include "male_base/reheads/facerules_xsi.qci"
+	$include "male_base/reheads/bodyrules_xsi.qci"
 }
 
 $popd
 
 $texturegroup "skinfamilies"
 {
-	{
-		"erdim_facemap.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap2.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap3.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap4.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap5.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap6.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap7.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap8.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap9.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap10.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap11.vmt"
-		"eyeball_r.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"erdim_facemap.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap2.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap3.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap4.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap5.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap6.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap7.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap8.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap9.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap10.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap11.vmt"
-		"eyeball_r_blue.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"erdim_facemap.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap2.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap3.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap4.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap5.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap6.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap7.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap8.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap9.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap10.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"erdim_facemap11.vmt"
-		"eyeball_r_green.vmt"
-		"eyeball_l_green.vmt"
-	}
+	{ "erdim_facemap.vmt" }
+	{ "erdim_facemap2.vmt" }
+	{ "erdim_facemap3.vmt" }
+	{ "erdim_facemap4.vmt" }
+	{ "erdim_facemap5.vmt" }
+	{ "erdim_facemap6.vmt" }
+	{ "erdim_facemap7.vmt" }
+	{ "erdim_facemap8.vmt" }
+	{ "erdim_facemap9.vmt" }
+	{ "erdim_facemap10.vmt" }
+	{ "erdim_facemap11.vmt" }
 }
 
 $include "male_base/male_base.qci"
-
-$pushd "male_base/hands"
-
-$bodygroup "hands"
-{
-	studio "male_base_hands.smd"
-	studio "male_base_hands_glove_fingerless.smd"
-	studio "male_base_hands_glove.smd"
-}
-
-$popd
-
-$pushd "male_base/beanies"
-
-$bodygroup "beanies"
-{
-	blank
-	studio "male_09_beanie_blue.smd"
-	studio "male_09_beanie_green.smd"
-}
-
-$popd
-
-$pushd "male_base/glasses"
-
-$bodygroup "glasses"
-{
-	blank
-	studio "male_09_glasses.smd"
-}
-
-$popd
+$include "strp_include_naked.qci"
 
 $attachment "eyes" "ValveBiped.Bip01_Head1" 3.79 -3.78 0.01 rotate 0 -80.1 -90
 $attachment "mouth" "ValveBiped.Bip01_Head1" 1 -5.7 0 rotate 0 -80 -90

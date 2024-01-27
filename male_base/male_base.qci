@@ -1,48 +1,13 @@
 $pushd "male_base"
 
-$bodygroup "torso"
-{
-	studio "male_base_torso_citizen_1.smd"
-	studio "male_base_torso_citizen_2.smd"
-	studio "male_base_torso_citizen_3.smd"
-	studio "male_base_torso_refugee_1.smd"
-	studio "male_base_torso_refugee_2.smd"
-	studio "male_base_torso_rebel_1.smd"
-	studio "male_base_torso_rebel_2.smd"
-	studio "male_base_torso_medic_1.smd"
-	studio "male_base_torso_medic_2.smd"
-	studio "male_base_torso_medic_3.smd"
-	studio "male_base_torso_hostage_1.smd"
-	studio "male_base_torso_hostage_2.smd"
-	studio "male_base_torso_combine_1.smd"
-	studio "male_base_torso_combine_2.smd"
-	studio "male_base_torso_combine_3.smd"
-}
-$bodygroup "legs"
-{
-	studio "male_base_legs_citizen_1.smd"
-	studio "male_base_legs_citizen_2.smd"
-	studio "male_base_legs_refugee.smd"
-	studio "male_base_legs_rebel_1.smd"
-	studio "male_base_legs_rebel_2.smd"
-	studio "male_base_legs_medic.smd"
-	studio "male_base_legs_hostage.smd"
-}
-
-$cdmaterials "models\bloo_ltcom_zel\citizens\"
-$cdmaterials "models\bloo_ltcom_zel\citizens\facemaps\" 
+$cdmaterials "fgut\"
+$cdmaterials "fgut\facemaps\" 
 
 $surfaceprop "flesh"
 
 $contents "solid"
 
 $eyeposition 0 0 70
-
-// Thes aren't really necessary and break certain landing animations, but I'm keeping them because people use the models for NPCs.
-$includemodel "humans/male_shared.mdl"
-$includemodel "humans/male_ss.mdl"
-$includemodel "humans/male_gestures.mdl"
-$includemodel "humans/male_postures.mdl"
 
 $include "male_base/male_base_ragdoll.qci"
 $include "male_base/male_base_commonbones.qci"

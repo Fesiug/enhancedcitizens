@@ -1,196 +1,48 @@
-$modelname "player/zelpa/male_06.mdl"
+$modelname "fgut/male_06_01.mdl"
 
 $includemodel "m_anm.mdl"
 
-$pushd "male_base/heads"
+$pushd "male_base/reheads"
 
-$model "male_06" "male_06_reference.smd" {
+$model male_06 "male_06.smd" {
+	eyeball righteye "ValveBiped.Bip01_Head1" -1.2711 -4.2197 67.5593 "eyeball_r" 1 4 "pupil_r" 0.63
+	eyeball lefteye "ValveBiped.Bip01_Head1" 1.3572 -4.2197 67.5514 "eyeball_l" 1 -4 "pupil_l" 0.63
 
-	eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.271100 -4.212246 67.585385 "eyeball_r" 1 4 "iris_unused" 0.63
-	eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.357200 -4.212246 67.577481 "eyeball_l" 1 -4 "iris_unused" 0.63
-	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
+	eyelid  upper_right "male_06" lowerer 1 -0.2621 neutral 0 0.1287 raiser 2 0.2467 split 0.1 eyeball righteye
+	eyelid  lower_right "male_06" lowerer 3 -0.3409 neutral 0 -0.2156 raiser 4 -0.0736 split 0.1 eyeball righteye
+	eyelid  upper_left "male_06" lowerer 1 -0.2621 neutral 0 0.1287 raiser 2 0.2467 split -0.1 eyeball lefteye
+	eyelid  lower_left "male_06" lowerer 3 -0.3409 neutral 0 -0.2156 raiser 4 -0.0736 split -0.1 eyeball lefteye
 
-	flexfile "male_base/heads/flexes/male_06_expressions" {
-	$include "male_base/heads/flexes/standardflex_xsi_06.qci"
+	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0     // mouth illumination
+
+	flexfile "male_06" {
+		$include "male_base/reheads/standardflex_xsi.qci"
+	}
+
+	$include "male_base/reheads/facerules_xsi.qci"
+	$include "male_base/reheads/bodyrules_xsi.qci"
 }
 
 $popd
 
 $texturegroup "skinfamilies"
 {
-	{
-		"eyeball_r.vmt"
-		"sandro_facemap.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"eyeball_r.vmt"
-		"sandro_facemap2.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"eyeball_r.vmt"
-		"sandro_facemap3.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"eyeball_r.vmt"
-		"sandro_facemap4.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"eyeball_r.vmt"
-		"sandro_facemap5.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"eyeball_r.vmt"
-		"sandro_facemap6.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"eyeball_r.vmt"
-		"sandro_facemap8.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"eyeball_r.vmt"
-		"sandro_facemap9.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"eyeball_r.vmt"
-		"sandro_facemap10.vmt"
-		"eyeball_l.vmt"
-	}
-	{
-		"eyeball_r_blue.vmt"
-		"sandro_facemap.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"eyeball_r_blue.vmt"
-		"sandro_facemap2.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"eyeball_r_blue.vmt"
-		"sandro_facemap3.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"eyeball_r_blue.vmt"
-		"sandro_facemap4.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"eyeball_r_blue.vmt"
-		"sandro_facemap5.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"eyeball_r_blue.vmt"
-		"sandro_facemap6.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"eyeball_r_blue.vmt"
-		"sandro_facemap8.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"eyeball_r_blue.vmt"
-		"sandro_facemap9.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"eyeball_r_blue.vmt"
-		"sandro_facemap10.vmt"
-		"eyeball_l_blue.vmt"
-	}
-	{
-		"eyeball_r_green.vmt"
-		"sandro_facemap.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"eyeball_r_green.vmt"
-		"sandro_facemap2.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"eyeball_r_green.vmt"
-		"sandro_facemap3.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"eyeball_r_green.vmt"
-		"sandro_facemap4.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"eyeball_r_green.vmt"
-		"sandro_facemap5.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"eyeball_r_green.vmt"
-		"sandro_facemap6.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"eyeball_r_green.vmt"
-		"sandro_facemap8.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"eyeball_r_green.vmt"
-		"sandro_facemap9.vmt"
-		"eyeball_l_green.vmt"
-	}
-	{
-		"eyeball_r_green.vmt"
-		"sandro_facemap10.vmt"
-		"eyeball_l_green.vmt"
-	}
+	{ "sandro_facemap.vmt" }
+	{ "sandro_facemap2.vmt" }
+	{ "sandro_facemap3.vmt" }
+	{ "sandro_facemap4.vmt" }
+	{ "sandro_facemap5.vmt" }
+	{ "sandro_facemap6.vmt" }
+	{ "sandro_facemap8.vmt" }
+	{ "sandro_facemap9.vmt" }
+	{ "sandro_facemap10.vmt" }
 }
 
 $include "male_base/male_base.qci"
+$include "strp_include_naked.qci"
 
-$pushd "male_base/hands"
-
-$bodygroup "hands"
-{
-	studio "male_base_hands.smd"
-	studio "male_base_hands_glove_fingerless.smd"
-	studio "male_base_hands_glove.smd"
-}
-
-$popd
-
-$pushd "male_base/beanies"
-
-$bodygroup "beanies"
-{
-	blank
-	studio "male_06_beanie_blue.smd"
-	studio "male_06_beanie_green.smd"
-}
-
-$popd
-
-$pushd "male_base/glasses"
-
-$bodygroup "glasses"
-{
-	blank
-	studio "male_06_glasses.smd"
-}
-
-$popd
-
-$attachment "eyes" "ValveBiped.Bip01_Head1" 3.78 -4.41 -0.04 rotate 0 -80.1 -90
-$attachment "mouth" "ValveBiped.Bip01_Head1" 1 -6.3 0 rotate 0 -80 -90
+$attachment "eyes" "ValveBiped.Bip01_Head1" 3.23 -3.49 0.12 rotate 0 -80.1 -90
+$attachment "mouth" "ValveBiped.Bip01_Head1" 0.6 -5.5 0 rotate 0 -80 -90
 $attachment "chest" "ValveBiped.Bip01_Spine2" 5 4 0 rotate 0 90 90
 $attachment "forward" "ValveBiped.forward" 0 0 0 rotate 0 0 0
 $attachment "anim_attachment_RH" "ValveBiped.Anim_Attachment_RH" 0 0 0 rotate -90 -90 0

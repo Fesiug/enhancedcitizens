@@ -1,0 +1,19 @@
+
+$pushd "male_base/naked"
+
+$bodygroup "naked_top"
+{
+	studio "naked_top.smd"
+	studio "naked_top_hands.smd"
+	blank
+}
+
+$bodygroup "naked_underpants"
+{
+	studio "naked_underpants.smd"
+	blank
+}
+
+$cdmaterials "fgut\naked\"
+
+$popd

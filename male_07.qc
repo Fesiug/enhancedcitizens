@@ -1,178 +1,44 @@
-$modelname "player/zelpa/male_07.mdl"
+$modelname "fgut/male_07_01.mdl"
 
 $includemodel "m_anm.mdl"
 
-$pushd "male_base/heads"
+$pushd "male_base/reheads"
 
-$model "male_07" "male_07_reference.smd" {
+$model male_07 "male_07.smd" {
+	eyeball righteye "ValveBiped.Bip01_Head1" -1.351 -3.2202 67.1935 "eyeball_r" 1 4 "grn_pupil_r" 0.63
+	eyeball lefteye "ValveBiped.Bip01_Head1" 1.1112 -3.2202 67.1386 "eyeball_l" 1 -4 "grn_pupil_l" 0.63
 
-	eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.351000 -3.220199 67.193499 "eyeball_r" 1 4 "iris_unused" 0.63
-	eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.111200 -3.220199 67.138605 "eyeball_l" 1 -4 "iris_unused" 0.63
-	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
+	eyelid  upper_right "male_07" lowerer 1 -0.1627 neutral 0 0.1716 raiser 2 0.2642 split 0.1 eyeball righteye
+	eyelid  lower_right "male_07" lowerer 3 -0.2623 neutral 0 -0.1926 raiser 4 -0.0231 split 0.1 eyeball righteye
+	eyelid  upper_left "male_07" lowerer 1 -0.1627 neutral 0 0.1716 raiser 2 0.2642 split -0.1 eyeball lefteye
+	eyelid  lower_left "male_07" lowerer 3 -0.2623 neutral 0 -0.1926 raiser 4 -0.0231 split -0.1 eyeball lefteye
 
-	flexfile "male_base/heads/flexes/male_07_expressions" {
-	$include "male_base/heads/flexes/standardflex_xsi_07.qci"
+	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0     // mouth illumination
+
+	flexfile "male_07" {
+		$include "male_base/reheads/standardflex_xsi.qci"
+	}
+
+	$include "male_base/reheads/facerules_xsi.qci"
+	$include "male_base/reheads/bodyrules_xsi.qci"
 }
 
 $popd
 
 $texturegroup "skinfamilies"
 {
-	{
-		"mike_facemap.vmt"
-		"eyeball_l.vmt"
-		"eyeball_r.vmt"
-	}
-	{
-		"mike_facemap2.vmt"
-		"eyeball_l.vmt"
-		"eyeball_r.vmt"
-	}
-	{
-		"mike_facemap3.vmt"
-		"eyeball_l.vmt"
-		"eyeball_r.vmt"
-	}
-	{
-		"mike_facemap4.vmt"
-		"eyeball_l.vmt"
-		"eyeball_r.vmt"
-	}
-	{
-		"mike_facemap5.vmt"
-		"eyeball_l.vmt"
-		"eyeball_r.vmt"
-	}
-	{
-		"mike_facemap6.vmt"
-		"eyeball_l.vmt"
-		"eyeball_r.vmt"
-	}
-	{
-		"mike_facemap7.vmt"
-		"eyeball_l.vmt"
-		"eyeball_r.vmt"
-	}
-	{
-		"mike_facemap8.vmt"
-		"eyeball_l.vmt"
-		"eyeball_r.vmt"
-	}
-	{
-		"mike_facemap.vmt"
-		"eyeball_l_blue.vmt"
-		"eyeball_r_blue.vmt"
-	}
-	{
-		"mike_facemap2.vmt"
-		"eyeball_l_blue.vmt"
-		"eyeball_r_blue.vmt"
-	}
-	{
-		"mike_facemap3.vmt"
-		"eyeball_l_blue.vmt"
-		"eyeball_r_blue.vmt"
-	}
-	{
-		"mike_facemap4.vmt"
-		"eyeball_l_blue.vmt"
-		"eyeball_r_blue.vmt"
-	}
-	{
-		"mike_facemap5.vmt"
-		"eyeball_l_blue.vmt"
-		"eyeball_r_blue.vmt"
-	}
-	{
-		"mike_facemap6.vmt"
-		"eyeball_l_blue.vmt"
-		"eyeball_r_blue.vmt"
-	}
-	{
-		"mike_facemap7.vmt"
-		"eyeball_l_blue.vmt"
-		"eyeball_r_blue.vmt"
-	}
-	{
-		"mike_facemap8.vmt"
-		"eyeball_l_blue.vmt"
-		"eyeball_r_blue.vmt"
-	}
-	{
-		"mike_facemap.vmt"
-		"eyeball_l_green.vmt"
-		"eyeball_r_green.vmt"
-	}
-	{
-		"mike_facemap2.vmt"
-		"eyeball_l_green.vmt"
-		"eyeball_r_green.vmt"
-	}
-	{
-		"mike_facemap3.vmt"
-		"eyeball_l_green.vmt"
-		"eyeball_r_green.vmt"
-	}
-	{
-		"mike_facemap4.vmt"
-		"eyeball_l_green.vmt"
-		"eyeball_r_green.vmt"
-	}
-	{
-		"mike_facemap5.vmt"
-		"eyeball_l_green.vmt"
-		"eyeball_r_green.vmt"
-	}
-	{
-		"mike_facemap6.vmt"
-		"eyeball_l_green.vmt"
-		"eyeball_r_green.vmt"
-	}
-	{
-		"mike_facemap7.vmt"
-		"eyeball_l_green.vmt"
-		"eyeball_r_green.vmt"
-	}
-	{
-		"mike_facemap8.vmt"
-		"eyeball_l_green.vmt"
-		"eyeball_r_green.vmt"
-	}
+	{ "mike_facemap.vmt" }
+	{ "mike_facemap2.vmt" }
+	{ "mike_facemap3.vmt" }
+	{ "mike_facemap4.vmt" }
+	{ "mike_facemap5.vmt" }
+	{ "mike_facemap6.vmt" }
+	{ "mike_facemap7.vmt" }
+	{ "mike_facemap8.vmt" }
 }
 
 $include "male_base/male_base.qci"
-
-$pushd "male_base/hands"
-
-$bodygroup "hands"
-{
-	studio "male_base_hands.smd"
-	studio "male_base_hands_glove_fingerless.smd"
-	studio "male_base_hands_glove.smd"
-}
-
-$popd
-
-$pushd "male_base/beanies"
-
-$bodygroup "beanies"
-{
-	blank
-	studio "male_07_beanie_blue.smd"
-	studio "male_07_beanie_green.smd"
-}
-
-$popd
-
-$pushd "male_base/glasses"
-
-$bodygroup "glasses"
-{
-	blank
-	studio "male_07_glasses.smd"
-}
-
-$popd
+$include "strp_include_naked.qci"
 
 $attachment "eyes" "ValveBiped.Bip01_Head1" 3.23 -3.49 0.12 rotate 0 -80.1 -90
 $attachment "mouth" "ValveBiped.Bip01_Head1" 0.6 -5.5 0 rotate 0 -80 -90
