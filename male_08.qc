@@ -39,7 +39,7 @@ $texturegroup "skinfamilies"
 }
 
 $include "male_base/male_base.qci"
-$include "strp_include_naked.qci"
+$include "male_base/naked.qci"
 
 $attachment "eyes" "ValveBiped.Bip01_Head1" 3.23 -3.49 0.12 rotate 0 -80.1 -90
 $attachment "mouth" "ValveBiped.Bip01_Head1" 0.6 -5.5 0 rotate 0 -80 -90

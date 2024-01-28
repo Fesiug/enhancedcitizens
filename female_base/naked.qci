@@ -1,0 +1,18 @@
+$pushd "chell"
+
+$bodygroup "naked_top"
+{
+	studio "chell.smd"
+	studio "chell_hands.smd"
+	blank
+}
+
+$bodygroup "naked_underpants"
+{
+	studio "chell_legs.smd"
+	blank
+}
+
+$cdmaterials "fgut\naked\"
+
+$popd

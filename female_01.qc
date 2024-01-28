@@ -1,16 +1,26 @@
-$modelname "fgut/female_01_07.mdl"
+$modelname "fgut/female_01_01.mdl"
 
 $includemodel "f_anm.mdl"
 
-$pushd "female_base/heads"
+$pushd "female_base/reheads"
 
 $model "female_01" "female_01.smd" {
+	eyeball righteye "ValveBiped.Bip01_Head1" -1.2607 -3.7018 64.9738 "eyeball_r" 1 4 "pupil_r" 0.66
+	eyeball lefteye "ValveBiped.Bip01_Head1" 1.1888 -3.7018 64.9717 "eyeball_l" 1 -4 "pupil_l" 0.66
 
-	eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.260700 -3.701802 64.973821 "eyeball_r" 1 4 "iris_unused" 0.66
-	eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.188800 -3.701801 64.971723 "eyeball_l" 1 -4 "iris_unused" 0.66
+	eyelid  upper_right "female_01" lowerer 1 -0.2426 neutral 0 0.1981 raiser 2 0.2812 split 0.1 eyeball righteye
+	eyelid  lower_right "female_01" lowerer 3 -0.3431 neutral 0 -0.2522 raiser 4 -0.0422 split 0.1 eyeball righteye
+	eyelid  upper_left "female_01" lowerer 1 -0.2426 neutral 0 0.1981 raiser 2 0.2812 split -0.1 eyeball lefteye
+	eyelid  lower_left "female_01" lowerer 3 -0.3431 neutral 0 -0.2522 raiser 4 -0.0422 split -0.1 eyeball lefteye
+
 	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
 
-	$include "female_base/heads/flexes/standardflex_xsi_01.qci"
+	flexfile "female_01" {
+		$include "female_base/reheads/standardflex_xsi.qci"
+	}
+
+	$include "female_base/reheads/facerules_xsi.qci"
+	$include "female_base/reheads/bodyrules_xsi.qci"
 }
 
 $popd
@@ -26,25 +36,7 @@ $texturegroup "skinfamilies"
 }
 
 $include "female_base/female_base.qci"
-
-$pushd "chell"
-
-$bodygroup "naked_top"
-{
-	studio "chell.smd"
-	studio "chell_hands.smd"
-	blank
-}
-
-$bodygroup "naked_underpants"
-{
-	studio "chell_legs.smd"
-	blank
-}
-
-$cdmaterials "fgut\naked\"
-
-$popd
+$include "female_base/naked.qci"
 
 $attachment "eyes" "ValveBiped.Bip01_Head1" 2.66 -4.29 0.04 rotate 0 -80.1 -90
 $attachment "mouth" "ValveBiped.Bip01_Head1" 0.1 -5.7 0 rotate 0 -80 -90
