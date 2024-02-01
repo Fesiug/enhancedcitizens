@@ -9,6 +9,12 @@ $bodygroup "torso"
 
 $proceduralbones "male_07.vrd"
 
+$texturegroup "skinfamilies"
+{
+	{ "scarf1" }
+	{ "scarf2" }
+}
+
 $cdmaterials "fgut\hl2rp\"
 
 $surfaceprop "flesh"
