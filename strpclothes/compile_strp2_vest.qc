@@ -9,6 +9,14 @@ $bodygroup "torso"
 
 $proceduralbones "male_07.vrd"
 
+$texturegroup "skinfamilies"
+{
+	{ "molle2" }
+	{ "molle2_2" }
+	{ "molle2_3" }
+	{ "molle2_4" }
+}
+
 $cdmaterials "fgut\hl2rp\"
 
 $surfaceprop "flesh"
